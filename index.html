@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zulia Fitri Cahya Ningtyas - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0a0a0c',
+                            800: '#121216',
+                            700: '#1a1a22',
+                            600: '#262633',
+                        },
+                        accent: {
+                            primary: '#6366f1',
+                            secondary: '#a855f7',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0c;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.15);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px 2px rgba(99, 102, 241, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .glass-nav {
+            background: rgba(18, 18, 22, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- FLOATING NAVIGATION BAR -->
+    <header class="fixed top-4 inset-x-0 z-50 px-4 max-w-6xl mx-auto">
+        <nav class="glass-nav rounded-full px-4 py-3 flex items-center justify-between shadow-2xl transition-all duration-300">
+            <!-- Brand / Logo -->
+            <a href="#hero" class="flex items-center gap-3 pl-2">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                    ZF
+                </div>
+                <span class="font-bold text-sm md:text-base tracking-tight text-white hidden sm:inline-block">
+                    Zulia Fitri <span class="text-indigo-400 font-normal">C.N.</span>
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+                <a href="#work" class="hover:text-indigo-400 transition-colors">Work</a>
+                <a href="#capabilities" class="hover:text-indigo-400 transition-colors">What I Can Do</a>
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About Me</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="openGithubGuide()" class="px-3 py-1.5 text-xs md:text-sm font-medium text-indigo-300 bg-indigo-950/60 hover:bg-indigo-900/80 border border-indigo-500/30 rounded-full transition-all flex items-center gap-1.5">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span class="hidden sm:inline">Panduan</span> Git
+                </button>
+                <a href="#contact" class="px-4 py-1.5 text-xs md:text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-full shadow-lg transition-all hover:scale-105 active:scale-95">
+                    Hire Me
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow pt-28 pb-16">
+        
+        <!-- HERO SECTION -->
+        <section id="hero" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/70 border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Informatics & System Student @ UNESA
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Hi, I'm <span class="gradient-text">Zulia Fitri</span><br>Cahya Ningtyas
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl mb-8 leading-relaxed mx-auto lg:mx-0">
+                        Mahasiswa Sistem Informasi Universitas Negeri Surabaya dengan latar belakang Teknik Komputer & Jaringan. Berfokus pada pengelolaan infrastruktur jaringan, administrasi sistem IT, dan pengembangan perangkat lunak.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-indigo-500/25 transition-all hover:-translate-y-0.5">
+                            Hubungi Saya
+                        </a>
+                        <a href="#about" class="px-6 py-3 rounded-xl bg-dark-700 hover:bg-dark-600 border border-gray-800 text-gray-200 font-medium transition-all">
+                            Pelajari Selengkapnya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Avatar / Image Placeholder -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-dark-800 border border-gray-800 p-3 overflow-hidden flex items-center justify-center">
+                        <div class="w-full h-full rounded-xl bg-gradient-to-b from-dark-700 to-dark-900 border border-gray-700/50 flex flex-col items-center justify-center p-6 text-center">
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 p-1 mb-4 shadow-xl">
+                                <div class="w-full h-full rounded-full bg-dark-900 flex items-center justify-center overflow-hidden">
+                                    <i class="fa-solid fa-user-graduate text-4xl sm:text-5xl text-indigo-400"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-bold text-white text-lg">Zulia Fitri C. N.</h3>
+                            <p class="text-xs text-indigo-300 mt-1">SI UNESA '26</p>
+                            <span class="mt-3 text-[11px] px-2.5 py-1 rounded-md bg-dark-600/80 text-gray-400">Ex-TKJ SMKN 1 Tuban</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK GALLERY / SELECTED WORK -->
+        <section id="work" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">Selected Work</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Work Gallery & Projects</h2>
+                </div>
+                <p class="text-gray-400 text-sm max-w-md mt-3 md:mt-0">
+                    Pengalaman proyek teknis dan operasional yang telah saya kerjakan selama magang maupun kegiatan akademik.
+                </p>
+            </div>
+
+            <!-- Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="gradient-border p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-950/80 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-dark-700 text-gray-400 border border-gray-700">Magang CCTV Tuban</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Administrative Operations</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Mengelola tugas administratif, penginputan data pelanggan, penataan dokumen layanan, serta rekam medis servis CCTV Tuban secara terstruktur.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-800/80">
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-indigo-300">Data Entry</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-indigo-300">Document Management</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-indigo-300">Service Records</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="gradient-border p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-dark-700 text-gray-400 border border-gray-700">Magang CCTV Tuban</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">CCTV Installation & Maintenance</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Mendokumentasikan alur pemasangan sistem CCTV di berbagai lokasi serta membantu pencatatan pemeliharaan jaringan kamera secara rutin.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-800/80">
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-purple-300">CCTV Systems</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-purple-300">Field Documentation</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-purple-300">Maintenance Log</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="gradient-border p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-dark-700 text-gray-400 border border-gray-700">Praktikum / TKJ</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Network Infrastructure Setup</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Penerapan ilmu Teknik Komputer Jaringan dalam konfigurasi IP, pemahaman arsitektur jaringan lokal, serta pemecahan masalah konektivitas (troubleshooting).
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-800/80">
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-emerald-300">Network Config</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-emerald-300">Troubleshooting</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-emerald-300">Hardware Setup</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="gradient-border p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950/80 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-dark-700 text-gray-400 border border-gray-700">Administrative & Tech</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Technical Documentation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Menyusun dan mengorganisir dokumen teknis proyek guna mendukung koordinasi yang presisi antara tim administratif dan staf teknisi lapangan.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-800/80">
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-blue-300">Tech Writing</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-blue-300">Project Coordination</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded bg-dark-700 text-blue-300">Reporting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I CAN DO / CAPABILITIES -->
+        <section id="capabilities" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">My Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">What I Can Do</h2>
+                <p class="text-gray-400 text-sm mt-3">
+                    Kombinasi antara keahlian teknis vokasional dan pemahaman akademis Sistem Informasi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="bg-dark-800/60 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/40 transition-all">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
+                            <i class="fa-solid fa-code text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Programming & Logic</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Basic Python Programming</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Script Writing & Automation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Algorithmic Thinking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-dark-800/60 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+                            <i class="fa-solid fa-server text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Networking & Hardware</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Network Infrastructure</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Network Configuration</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Connectivity Troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-dark-800/60 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-all">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                            <i class="fa-solid fa-file-invoice text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Administration</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Data Entry & Management</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Document Organization</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Customer & Service Records</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="bg-dark-800/60 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4">
+                            <i class="fa-solid fa-brain text-lg"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Soft Skills</h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-xs"></i> Structured Problem Solving</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-xs"></i> High Adaptability</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-xs"></i> Team Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="gradient-border p-8 sm:p-12 rounded-3xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Text Info -->
+                    <div class="lg:col-span-7">
+                        <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">About Me</span>
+                        <h2 class="text-3xl font-bold text-white mt-1 mb-4">Problem Solver. IT Enthusiast.</h2>
+                        <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                            Saya adalah mahasiswa aktif program studi **Sistem Informasi di Universitas Negeri Surabaya (Angkatan 2026)**. Berbekal latar belakang pendidikan vokasi di bidang **Teknik Komputer dan Jaringan (SMK Negeri 1 Tuban)**, saya memiliki fondasi kuat dalam arsitektur komputer, konfigurasi jaringan, serta pemecahan masalah teknis.
+                        </p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Memiliki pengalaman praktis sebagai *Administrative Intern* di CCTV Tuban, saya mampu memadukan kecakapan teknis jaringan dengan kemampuan administrasi dan manajemen data yang rapi. Saya selalu antusias untuk belajar hal baru dan siap berkontribusi dalam proyek IT skala riil.
+                        </p>
+
+                        <!-- Activity Tags -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+                            <div class="p-3 rounded-xl bg-dark-800 border border-gray-800">
+                                <span class="text-xs text-indigo-400 block font-medium">Building</span>
+                                <span class="text-xs text-gray-300 font-semibold">Web & Basic Scripts</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-dark-800 border border-gray-800">
+                                <span class="text-xs text-purple-400 block font-medium">Exploring</span>
+                                <span class="text-xs text-gray-300 font-semibold">Network Infrastructure</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-dark-800 border border-gray-800">
+                                <span class="text-xs text-emerald-400 block font-medium">Learning</span>
+                                <span class="text-xs text-gray-300 font-semibold">Information Systems</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Link -->
+                        <a href="mailto:zuliafitricahyaningtyas@gmail.com" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold text-sm group">
+                            Download / Request Resume 
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Statistics / Timeline Cards -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-dark-800/80 p-5 rounded-2xl border border-gray-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-lg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400">2026 - Present</span>
+                                <h4 class="font-bold text-white text-sm">Universitas Negeri Surabaya</h4>
+                                <p class="text-xs text-indigo-300">S1 Sistem Informasi</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-dark-800/80 p-5 rounded-2xl border border-gray-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-950 flex items-center justify-center text-purple-400 text-lg">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400">Juli - Des 2025</span>
+                                <h4 class="font-bold text-white text-sm">Administrative Intern</h4>
+                                <p class="text-xs text-purple-300">CCTV Tuban</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-dark-800/80 p-5 rounded-2xl border border-gray-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-950 flex items-center justify-center text-emerald-400 text-lg">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400">2023 - 2026</span>
+                                <h4 class="font-bold text-white text-sm">SMK Negeri 1 Tuban</h4>
+                                <p class="text-xs text-emerald-300">Teknik Komputer & Jaringan (TKJ)</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-dark-800/80 p-5 rounded-2xl border border-gray-800 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-950 flex items-center justify-center text-red-400 text-lg">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400">Organisasi</span>
+                                <h4 class="font-bold text-white text-sm">Palang Merah Remaja (PMR)</h4>
+                                <p class="text-xs text-red-300">Pertolongan Pertama & Donor Darah</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-indigo-400 uppercase">Get In Touch</span>
+                        <h2 class="text-4xl font-extrabold text-white mt-1 mb-4">Let's Work Together</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                            Terbuka untuk peluang magang, kolaborasi proyek IT, maupun diskusi mengenai teknologi dan sistem informasi.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Email -->
+                        <a href="mailto:zuliafitricahyaningtyas@gmail.com" class="p-4 rounded-2xl bg-dark-800 border border-gray-800 flex items-center gap-4 hover:border-indigo-500/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-gray-400 block uppercase font-bold">Email</span>
+                                <span class="text-sm font-semibold text-white break-all">zuliafitricahyaningtyas@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:082332382424" class="p-4 rounded-2xl bg-dark-800 border border-gray-800 flex items-center gap-4 hover:border-indigo-500/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-gray-400 block uppercase font-bold">Phone / WhatsApp</span>
+                                <span class="text-sm font-semibold text-white">0823-3238-2424</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/zulia-fitri-cahya-b1107a407" target="_blank" class="p-4 rounded-2xl bg-dark-800 border border-gray-800 flex items-center gap-4 hover:border-indigo-500/50 transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-gray-400 block uppercase font-bold">LinkedIn</span>
+                                <span class="text-sm font-semibold text-white">zulia-fitri-cahya-b1107a407</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-dark-800/80 border border-gray-800 rounded-3xl p-6 sm:p-8">
+                        <h3 class="text-xl font-bold text-white mb-6">Send Me a Message</h3>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-400 mb-1">Nama Lengkap</label>
+                                    <input type="text" required placeholder="Nama Anda" class="w-full bg-dark-900 border border-gray-700/70 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-400 mb-1">Email</label>
+                                    <input type="email" required placeholder="email@contoh.com" class="w-full bg-dark-900 border border-gray-700/70 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1">Subjek</label>
+                                <input type="text" required placeholder="Tujuan Pesan" class="w-full bg-dark-900 border border-gray-700/70 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1">Pesan</label>
+                                <textarea rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full bg-dark-900 border border-gray-700/70 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                        <!-- Form Success Message Toast -->
+                        <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs text-center">
+                            Pesan Anda berhasil dikirim! Terima kasih telah menghubungi.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800/80 bg-dark-900/90 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-gray-500 text-center sm:text-left">
+                &copy; 2026 Zulia Fitri Cahya Ningtyas. All rights reserved.
+            </p>
+            <div class="flex items-center gap-4 text-xs text-gray-400">
+                <button onclick="openGithubGuide()" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+                    <i class="fa-brands fa-github"></i> Panduan Upload GitHub
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: PANDUAN UPLOAD GITHUB (DARI BUKU PANDUAN) -->
+    <div id="githubModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-dark-800 border border-gray-700 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeGithubGuide()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl w-8 h-8 rounded-full bg-dark-700 flex items-center justify-center">
+                &times;
+            </button>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-indigo-950 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Panduan Upload ke GitHub</h3>
+                    <p class="text-xs text-gray-400">Langkah resmi sesuai Buku Panduan Tutorial Portofolio</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-sm text-gray-300">
+                <div class="p-4 rounded-xl bg-dark-900 border border-gray-800">
+                    <h4 class="font-bold text-indigo-400 text-xs uppercase mb-1">1. Cek Git Terpasang</h4>
+                    <p class="text-xs text-gray-400 mb-2">Buka terminal VS Code / CMD, ketik:</p>
+                    <code class="block bg-black/60 p-2 rounded text-emerald-400 text-xs font-mono">git --version</code>
+                </div>
+
+                <div class="p-4 rounded-xl bg-dark-900 border border-gray-800">
+                    <h4 class="font-bold text-indigo-400 text-xs uppercase mb-1">2. Buat Repositori di GitHub</h4>
+                    <p class="text-xs text-gray-400">Login ke GitHub &rarr; Klik <b>New Repository</b> &rarr; Beri nama (misal: <code class="text-indigo-300">portfolio</code>) &rarr; Pilih Public &rarr; Klik <b>Create Repository</b>.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-dark-900 border border-gray-800">
+                    <h4 class="font-bold text-indigo-400 text-xs uppercase mb-1">3. Eksekusi Perintah Git</h4>
+                    <p class="text-xs text-gray-400 mb-2">Jalankan perintah ini secara berurutan di terminal folder project:</p>
+                    <pre class="bg-black/60 p-3 rounded text-emerald-400 text-xs font-mono space-y-1">
+git init
+git add .
+git commit -m "First commit portofolio Zulia"
+git branch -M main
+git remote add origin https://github.com/USERNAME/NAMA-REPOSITORY.git
+git push -u origin main</pre>
+                </div>
+
+                <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-500/30">
+                    <h4 class="font-bold text-indigo-300 text-xs uppercase mb-1"><i class="fa-solid fa-globe mr-1"></i> Cara Publish Website (GitHub Pages)</h4>
+                    <p class="text-xs text-gray-300">
+                        Di GitHub, masuk ke <b>Settings</b> &rarr; <b>Pages</b> &rarr; Pada bagian Branch pilih <b>main</b> &rarr; Klik <b>Save</b>. Tunggu 1-2 menit, website Anda akan online!
+                    </p>
+                </div>
+            </div>
+
+            <button onclick="closeGithubGuide()" class="mt-6 w-full py-2.5 rounded-xl bg-dark-700 hover:bg-dark-600 text-gray-200 text-xs font-semibold">
+                Tutup Panduan
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        }
+
+        function openGithubGuide() {
+            document.getElementById('githubModal').classList.remove('hidden');
+        }
+
+        function closeGithubGuide() {
+            document.getElementById('githubModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
